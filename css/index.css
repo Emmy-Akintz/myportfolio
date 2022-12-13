@@ -1,0 +1,646 @@
+/* basic code */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    transition: all 0.5 ease;
+}
+
+h1 {
+    font: bold 20px Tahoma;
+}
+
+h2 {
+    font: bold 14px Tahoma;
+}
+
+header,
+section,
+footer,
+nav {
+    display: block;
+}
+
+section {
+    padding-bottom: 10px;
+}
+
+body {
+    text-align: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+#big_wrapper {
+    background-color: rgb(160, 160, 160);
+    width: 100%;
+    margin: auto;
+    text-align: left;
+}
+
+
+/* /basic code */
+
+
+/* navbar code */
+
+#navbar {
+    display: -webkit-flex;
+    width: 100%;
+    cursor: pointer;
+    padding-left: 20px;
+}
+
+#navbar img {
+    float: left;
+}
+
+nav {
+    float: right;
+}
+
+#navbar ul {
+    position: absolute;
+    right: 15px;
+    top: 15px;
+}
+
+#navbar li {
+    display: inline-block;
+    padding: 5px 25px;
+    font: bold 14px Tahoma;
+}
+
+#navbar a {
+    text-decoration: none;
+    color: white;
+    display: inline-block;
+    font-weight: 600;
+}
+
+#navbar a:hover {
+    color: rgb(233, 233, 233);
+    transition: .5s;
+}
+
+
+/* /navbar code */
+
+
+/* sticky bar code */
+
+.navbar {
+    width: 100%;
+    padding: 30px 0;
+    z-index: 999;
+    transition: all 0.3s ease;
+}
+
+.navbar.sticky {
+    position: fixed;
+    top: 0;
+    padding: 0 0;
+    background-color: rgb(160, 160, 160);
+}
+
+.sticky+.content {
+    padding: 60px;
+}
+
+
+/* /sticky bar code */
+
+
+/* toggle btn code */
+
+.toggle_btn {
+    width: 35px;
+    position: absolute;
+    right: 25px;
+    top: 15px;
+    display: none;
+    cursor: pointer;
+    transition: all .5s ease;
+}
+
+.toggle_btn:hover {
+    box-shadow: 0px 0px 76px -14px rgba(0, 0, 0, 0.75);
+}
+
+.toggle_btn span {
+    display: inline-block;
+    width: 100%;
+    height: 2px;
+    background-color: white;
+    margin-bottom: 8px;
+    transition: .5s;
+}
+
+@media screen and (min-width: 991px) {
+    .toggle_btn:hover .span1 {
+        transform: rotate(-223deg) translate(8px, -10px);
+        transition-delay: .1s;
+    }
+    
+    .toggle_btn:hover .span2 {
+        opacity: 0;
+        transition-delay: .1s;
+    }
+    
+    .toggle_btn:hover .span3 {
+        transform: rotate(223deg) translate(7px, 7px);
+        transition-delay: .1s;
+    }
+}
+
+/* /toggle btn code */
+
+
+/* small screen navbar code */
+
+@media screen and (max-width: 991px) {
+    .toggle_btn {
+        display: block;
+    }
+    nav {
+        display: none;
+        width: 40%;
+        border-top: 1px solid black;
+        padding-top: 20px;
+        margin-top: 20px;
+        position: fixed;
+        height: 100vh;
+        background-color: black;
+        top: -20;
+        left: 0;
+        transition: .5s;
+    }
+    nav ul li {
+        padding: 20px 0px;
+        width: 100%;
+        text-align: center;
+    }
+    #navbar a {
+        color: white;
+    }
+    #navbar a:hover {
+        color: rgb(233, 233, 233);
+    }
+    nav.show {
+        display: block;
+    }
+}
+
+
+/* /small screen navbar code */
+
+
+/* introduction code */
+
+
+/* .sectionA_image {
+    background-image: url("../image/laptop\ coding.jpg");
+    width: 100%;
+    position: absolute;
+} */
+
+#sectionA {
+    text-align: center;
+    margin: 30px auto;
+    padding: 90px 40px 80px 40px;
+    width: 250px;
+    height: 250px;
+    border: 5px solid white;
+    border-radius: 50%;
+    color: white;
+    font: bold 14px Tahoma;
+}
+
+#sectionA:hover {
+    cursor: default;
+    transition: .5s;
+}
+
+#sectionA:hover span {
+    color: blue;
+    transition: .5s;
+}
+
+
+/* /introduction code */
+
+
+/* about code */
+
+#sectionB {
+    background-color: white;
+    margin: 20px 0 0 0;
+    padding: 20px;
+}
+
+#sectionB span {
+    color: black;
+}
+
+#sectionB h1 {
+    text-align: center;
+    color: black;
+}
+
+#sectionB h2 {
+    text-align: center;
+    color: rgb(120, 120, 120);
+}
+
+#sectionB div img {
+    max-width: 500px;
+    width: 70%;
+    border-radius: 7px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+#sectionB div {
+    text-align: center;
+}
+
+#sectionB h3 {
+    color: rgb(50, 50, 50);
+    text-align: center;
+}
+
+#sectionB h3 span {
+    color: rgb(50, 50, 50);
+}
+
+#sectionB p {
+    text-align: justify;
+    margin: auto;
+    padding: auto;
+    max-width: 700px;
+}
+
+#sectionB #button {
+    border: none;
+}
+
+#sectionB #button a {
+    text-decoration: none;
+    color: white;
+    background-color: rgb(160, 160, 160);
+    padding: 10px;
+    border: none;
+    border-radius: 15px;
+    font: bold 20px Tahoma;
+}
+
+#sectionB #button a:hover {
+    color: rgb(160, 160, 160);
+    background-color: white;
+    border: 1px solid rgb(160, 160, 160);
+}
+
+#sectionB #read_more {
+    text-align: center;
+}
+
+
+/* /about code */
+
+
+/* my skills code */
+
+#sectionC {
+    text-align: center;
+    background-color: white;
+    padding: 20px;
+}
+
+#sectionC h2 {
+    color: rgb(50, 50, 50);
+}
+
+#sectionC h2 span {
+    color: black;
+}
+
+#sectionC h1 {
+    color: black;
+}
+
+#sectionC div {
+    max-width: 700px;
+    margin: auto;
+    padding: auto;
+    text-align: center;
+    display: inline-block;
+}
+
+#sectionC div #skills {
+    background-color: rgb(160, 160, 160);
+    color: white;
+    margin: 10px;
+    padding: 20px;
+    border-radius: 7px;
+    max-width: 300px;
+    min-width: 240px;
+    text-align: center;
+    cursor: pointer;
+}
+
+#sectionC div #skills:hover {
+    background-color: rgb(120, 120, 120);
+    transition: .5s;
+}
+
+@media screen and (max-width: 300px) {
+    #sectionC div #skills {
+        margin: 10px auto 10px auto;
+    }
+}
+
+
+/* /my skills code */
+
+
+/* experience code */
+
+#sectionD {
+    background-color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+#sectionD h1 {
+    color: black;
+}
+
+#sectionD h2 {
+    color: rgb(50, 50, 50);
+}
+
+#sectionD h2 span {
+    color: black;
+}
+
+#sectionD p {
+    max-width: 700px;
+    margin: auto;
+    padding: auto;
+    text-align: justify;
+}
+
+#sectionD button {
+    border: none;
+    margin-top: 20px;
+    margin-bottom: 50px;
+}
+
+#sectionD #button a {
+    text-decoration: none;
+    color: white;
+    background-color: rgb(160, 160, 160);
+    padding: 10px;
+    border: none;
+    border-radius: 15px;
+    font: bold 20px Tahoma;
+}
+
+#sectionD #button a:hover {
+    color: rgb(160, 160, 160);
+    background-color: white;
+    border: 1px solid rgb(160, 160, 160);
+}
+
+#sectionD .exp_level {
+    margin: auto;
+    margin-top: 10px;
+    max-width: 700px;
+    text-align: center;
+    font: bold 20px Tahoma;
+    cursor: pointer;
+}
+
+#sectionD .pghouse {
+    height: 8px;
+    width: 100%;
+    background-color: #CCC;
+    border-radius: 3px;
+    display: inline-block;
+    position: relative;
+}
+
+#sectionD .pghouse .progress_bar {
+    position: absolute;
+    height: 100%;
+    background-color: rgb(50, 50, 50);
+    border-radius: 3px;
+    /* animation: progress-animation 5s forwards; */
+}
+
+
+/* @keyframes progress-animation {
+    0% {
+        width: 0%;
+    }
+    100% {
+        width: 100%;
+    }
+} */
+
+
+/* /experience code */
+
+
+/* portfolio code */
+
+#sectionE {
+    background-color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+#sectionE h1 {
+    color: black;
+}
+
+#sectionE h2 {
+    color: rgb(50, 50, 50);
+}
+
+#sectionE h2 span {
+    color: black;
+}
+
+#pic_roll {
+    display: flex;
+    overflow-x: scroll;
+    padding: 20px;
+    margin: 20px;
+    background-color: rgb(99, 99, 99);
+    border-radius: 7px;
+    max-width: 700px;
+    margin: auto;
+    padding: auto;
+}
+
+#sectionE img {
+    border-radius: 5px;
+    margin: 5px;
+    margin-right: 25px;
+    max-width: 300px;
+    width: 45%;
+    float: left;
+}
+
+#sectionE button {
+    border: none;
+    margin-top: 20px;
+}
+
+#sectionE #button a {
+    text-decoration: none;
+    color: white;
+    background-color: rgb(160, 160, 160);
+    padding: 10px;
+    border: none;
+    border-radius: 15px;
+    font: bold 20px Tahoma;
+}
+
+#sectionE #button a:hover {
+    color: rgb(160, 160, 160);
+    background-color: white;
+    border: 1px solid rgb(160, 160, 160);
+}
+
+
+/* /portfolio code */
+
+
+/* contact code */
+
+#sectionF {
+    text-align: center;
+    background-color: white;
+    padding: 20px;
+}
+
+#sectionF h2 {
+    color: rgb(50, 50, 50);
+}
+
+#sectionF h2 span {
+    color: black;
+}
+
+#sectionF h3 {
+    font: bold 20px Tahoma;
+}
+
+#sectionF #ftext {
+    max-width: 700px;
+    margin: auto;
+    padding: auto;
+    text-align: justify;
+}
+
+#sectionF input {
+    padding: 10px;
+    border-radius: 7px;
+    margin: 10px auto 10px 10px;
+    border: 1px solid black;
+}
+
+#sectionF #name_email {
+    display: -webkit-flex;
+}
+
+#sectionF #Name {
+    width: 48%;
+}
+
+#sectionF #Email {
+    width: 48%;
+    margin-right: 0;
+}
+
+#sectionF #Subject {
+    width: 100%;
+}
+
+#sectionF #Describe {
+    width: 100%;
+    height: 80px;
+}
+
+#sectionF button {
+    border: none;
+    margin-top: 20px;
+    background-color: white;
+}
+
+#sectionF button a {
+    text-decoration: none;
+    color: white;
+    padding: 10px;
+    margin: 10px;
+    border-radius: 7px;
+    background-color: rgb(160, 160, 160);
+    border: none;
+}
+
+#sectionF button a:hover {
+    color: rgb(160, 160, 160);
+    background-color: white;
+    border: 1px solid rgb(160, 160, 160);
+}
+
+
+/* /contact code */
+
+
+/* back to top code */
+
+#last_section {
+    text-align: center;
+    border: none;
+    position: absolute;
+    right: 0;
+    padding: 20px;
+}
+
+#last_section div {
+    width: 50px;
+    height: 50px;
+    background-color: rgb(99, 99, 99);
+    border-radius: 7px;
+    padding-top: 10px;
+}
+
+
+/* /back to top code */
+
+
+/* footer code */
+
+footer {
+    width: 100%;
+    background-color: white;
+    color: black;
+    text-align: center;
+    padding: 20px;
+    cursor: pointer;
+}
+
+footer span {
+    color: rgb(50, 50, 50);
+}
+
+footer div a {
+    color: white;
+}
+
+
+/* /footer code */
