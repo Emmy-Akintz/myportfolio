@@ -557,20 +557,20 @@ nav {
     display: -webkit-flex;
 }
 
-#sectionF #Name {
+#sectionF .Name {
     width: 48%;
 }
 
-#sectionF #Email {
+#sectionF .Email {
     width: 48%;
     margin-right: 0;
 }
 
-#sectionF #Subject {
+#sectionF .Subject {
     width: 100%;
 }
 
-#sectionF #Describe {
+#sectionF .Describe {
     width: 100%;
     height: 80px;
 }
