@@ -1,9 +1,12 @@
+require('dotenv').config()
+
+const express = require('express')
 const { log } = require('console');
 const nodemailer = require('nodemailer');
-const myEmail = 'emzyakints2005@gmail.com';
-const myEmailPassword = 'drhorlmes2005';
+const myEmail = process.env.MY_EMAIL;
+const myEmailPassword = process.env.MY_EMAIL_PASSWORD;
 // const clientEmail = document.getElementById('clientEmail');
-const clientEmail = 'akintan.ayomide@lmu.edu.ng';
+const clientEmail = process.env.MY_SCHOOL_MAIL;
 // var clientSubject = document.getElementById('clientSubject');
 var clientSubject = 'testing smtp service';
 // var clientMessage = document.getElementById('clientMessage');
@@ -31,3 +34,13 @@ transporter.sendMail(mailOptions, function(error, info) {
         console.log('Email sent: ' + info.response)
     )
 });
+
+const app = express()
+
+app.listen(process.env.PORT, () => {
+    console.log('listening on port ' + process.env.PORT)
+})
+
+console.log(myEmail);
+console.log(myEmailPassword);
+console.log(clientEmail);
